@@ -33,11 +33,13 @@ yarn start
 
 Each time, memory grew towards the peak, then decreased back down towards the stable.
 
+
 | Run | Stable  | Peak    |
 | --- | ------- | ------- |
 | 1   | 1.04 GB | 2.49 GB |
 | 2   | 1.08 GB | 2.29 GB |
 | 3   | 1.07 GB | 2.37 GB |
+
 
 ### Webpack 5
 
@@ -53,6 +55,10 @@ Each run:
 yarn start
 ```
 
+These are runs from different settings under `cache` in `app.config.js`.
+
+#### cache: 'filesystem'
+
 Each run grew towards 20 MB more than the stable amount then dipped down slightly.
 
 | Run | Stable  |
@@ -60,6 +66,26 @@ Each run grew towards 20 MB more than the stable amount then dipped down slightl
 | 1   | 1.65 GB |
 | 2   | 471 MB  |
 | 3   | 471 MB  |
+
+#### cache: true ('memory')
+
+Each time, memory grew towards the peak, then decreased back down towards the stable.
+
+| Run | Stable  | Peak    |
+| --- | ------- | ------- |
+| 1   | 1.18 GB | 1.84 GB |
+| 2   | 1.27 GB | 1.84 GB |
+| 3   | 1.25 GB | 1.84 GB |
+
+#### cache: false
+
+Each time, memory grew towards the peak, then decreased back down towards the stable.
+
+| Run | Stable  | Peak    |
+| --- | ------- | ------- |
+| 1   | 1.38 GB | 1.84 GB |
+| 2   | 1.39 GB | 1.88 GB |
+| 3   | 1.26 GB | 1.84 GB |
 
 ## System Information
 
